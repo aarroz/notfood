@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/unlocked_doortp.png-c43d3c5e215e8bbf1ae25e4cc6fe8fc3.stex"
+
+[deps]
+
+source_file="res://openart tilema/interactable/unlocked_doortp.png"
+source_md5="481b29dd0cc2bbf2dc48832590e8abfc"
+
+dest_files=[ "res://.import/unlocked_doortp.png-c43d3c5e215e8bbf1ae25e4cc6fe8fc3.stex" ]
+dest_md5="29477ed35ac5a0f8f9f4d00059caa9b4"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
