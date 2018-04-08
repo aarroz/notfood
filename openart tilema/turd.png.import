@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_character.png-7578ee4e9bcb8511e5a4d7a120fb9451.stex"
+path="res://.import/turd.png-8dd5edcb5be3ba3eec2c8485c8a880f1.stex"
 
 [deps]
 
-source_file="res://characters/sprite_character.png"
-source_md5="c171a88a920b8b4330064a2f32b84707"
+source_file="res://openart tilema/turd.png"
+source_md5="03d9af6c9689c8600336a32c0bdd7aa9"
 
-dest_files=[ "res://.import/sprite_character.png-7578ee4e9bcb8511e5a4d7a120fb9451.stex" ]
-dest_md5="4a6eecc4aece0abc336c1985b35fb4b7"
+dest_files=[ "res://.import/turd.png-8dd5edcb5be3ba3eec2c8485c8a880f1.stex" ]
+dest_md5="234b48dce88ff1e3c6f1cc077b6bb8b9"
 
 [params]
 

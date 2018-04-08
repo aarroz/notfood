@@ -4,7 +4,7 @@
 [ext_resource path="res://openart tilema/interactable/floor_door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/test_character.tscn" type="PackedScene" id=3]
 
-[node name="Map" type="Node"]
+[node name="Map" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
