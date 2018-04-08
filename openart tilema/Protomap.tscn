@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://openart tilema/default_tiles_x.png" type="Texture" id=1]
-[ext_resource path="res://characters/sprite_character.png" type="Texture" id=2]
+[ext_resource path="res://openart tilema/items/item_key.tscn" type="PackedScene" id=2]
+[ext_resource path="res://openart tilema/prokectiles.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -19,11 +20,6 @@ custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16, 16 )
-
-[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
@@ -48,7 +44,12 @@ extents = Vector2( 16, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Protomap" type="Node" index="0"]
+[sub_resource type="CircleShape2D" id=10]
+
+custom_solver_bias = 0.0
+radius = 3.03907
+
+[node name="Protomap" type="Node"]
 
 [node name="floor_brick" type="Sprite" parent="." index="0"]
 
@@ -78,6 +79,7 @@ disabled = true
 
 [node name="roof_stone" type="Sprite" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 48, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -146,33 +148,12 @@ bounce = 0.0
 shape = SubResource( 4 )
 disabled = true
 
-[node name="item_key" type="Sprite" parent="." index="4"]
+[node name="item_key" parent="." index="4" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 position = Vector2( 144, 16 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 128, 0, 32, 32 )
-_sections_unfolded = [ "Region" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="item_key" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="item_key/StaticBody2D" index="0"]
-
-shape = SubResource( 5 )
-disabled = true
 
 [node name="roof_keyhole" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 176, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -265,7 +246,24 @@ disabled = true
 
 [node name="Sprite" type="Sprite" parent="." index="9"]
 
-position = Vector2( 16, 48 )
-texture = ExtResource( 2 )
+position = Vector2( 10, 40 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 6, 5, 5 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
+
+shape = SubResource( 10 )
 
 

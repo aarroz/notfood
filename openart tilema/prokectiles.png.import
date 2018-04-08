@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_character.png-7578ee4e9bcb8511e5a4d7a120fb9451.stex"
+path="res://.import/prokectiles.png-323cb6d231528afd2088222e0fb7bf1b.stex"
 
 [deps]
 
-source_file="res://characters/sprite_character.png"
-source_md5="c171a88a920b8b4330064a2f32b84707"
+source_file="res://openart tilema/prokectiles.png"
+source_md5="f79cef865f1a68cde2add56c5a26555f"
 
-dest_files=[ "res://.import/sprite_character.png-7578ee4e9bcb8511e5a4d7a120fb9451.stex" ]
-dest_md5="aab94d4798570bd9567ae9bb7e1bbe0e"
+dest_files=[ "res://.import/prokectiles.png-323cb6d231528afd2088222e0fb7bf1b.stex" ]
+dest_md5="d5394e77e238951aa295c6db8adfe5f0"
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

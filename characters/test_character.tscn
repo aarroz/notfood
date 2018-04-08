@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/player_main.gd" type="Script" id=1]
-[ext_resource path="res://characters/sprite_smallcharacter.png" type="Texture" id=2]
+[ext_resource path="res://openart tilema/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/sprite_smallcharacter.png" type="Texture" id=3]
+[ext_resource path="res://openart tilema/default_tiles_x.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12, 12 )
 
-[node name="test_player" type="KinematicBody2D" groups=[
+[node name="test_player" type="KinematicBody2D" index="0" groups=[
 "player",
 ]]
 
@@ -17,11 +19,12 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index", "collision" ]
+_sections_unfolded = [ "Collision", "Pickable", "collision" ]
+Bullet = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="player_body" type="Sprite" parent="." index="0"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -51,5 +54,19 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+
+[node name="player_weapon" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 4 )
+offset = Vector2( 16, 0 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )
+region_filter_clip = true
+_sections_unfolded = [ "Offset", "Region", "Z Index" ]
+
+[node name="Position2D" type="Position2D" parent="player_weapon" index="0"]
+
+position = Vector2( 32, 0 )
+_sections_unfolded = [ "Transform" ]
 
 
